@@ -1,0 +1,169 @@
+/* ====== Global Style ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a1f44, #1e3a8a);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Header ====== */
+.site-header {
+  background: linear-gradient(135deg, #1e3a8a, #0a1f44);
+  color: white;
+  padding: 10px 5px; /* lebih kecil agar header tidak terlalu tinggi */
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* garis bawah lebih tipis */
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* jarak antar elemen lebih rapat */
+}
+
+.school-logo {
+  width: 90px; /* logo lebih kecil */
+  height: auto;
+}
+
+.header-text h1 {
+  font-size: 2em; /* judul lebih ramping */
+  color: #60a5fa;
+  margin: 0;
+  line-height: 1.2; /* rapatkan jarak antar baris */
+}
+
+.header-text h3 {
+  font-size: 1.3em;
+  color: #ffffff;
+  margin: 2px 0; /* kecilkan jarak atas/bawah */
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-size: 1em; /* tagline lebih kecil */
+  color: #cbd5e1;
+  margin: 2px 0; /* rapatkan jarak */
+  line-height: 1.3;
+}
+
+
+
+/* ====== Navbar ====== */
+nav {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #93c5fd;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* ====== Grid Menu ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default 2 card per baris */
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ====== Icon Style ====== */
+.icon {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 15px;
+  transition: transform 0.3s, opacity 0.3s;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.card:hover .icon {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* ====== Link Style ====== */
+.card a {
+  text-decoration: none;
+  color: #93c5fd;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 0.9em;
+  color: #94a3b8;
+}
+
+/* ====== Animasi Fade-In ====== */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .school-logo {
+    width: 90px;
+  }
+
+  .header-text h1 {
+    font-size: 1.8em;
+  }
+
+  .icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .grid {
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom di HP */
+    gap: 15px;
+  }
+}
